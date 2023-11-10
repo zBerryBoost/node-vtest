@@ -4,7 +4,7 @@
   "description": "A brief description of your project",
   "main": "server.js",
   "engines": {
-    "node": ">=14.0.0"
+    "node": "v20.9.0"
   },
   "scripts": {
     "start": "node server.js",
