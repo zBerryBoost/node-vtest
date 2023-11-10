@@ -6,7 +6,7 @@ const router = express.Router();
 const app =express();
 
 
-router.get("/", (req, res) => {
+router.get("/", async(req, res) => {
      console.log("hello data");
 });
 
