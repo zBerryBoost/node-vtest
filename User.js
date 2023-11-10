@@ -23,7 +23,7 @@ router.get('/', async(req, res)=>{
         console.error("error getting users")
         res.status(500).json({error:"internal server error"})
     }
-    app.get("https://node-vtest.vercel.app/api/users", (req, res) => {
+    router.get("https://node-vtest.vercel.app/api/users", (req, res) => {
    res.json({ message: "Hello, this is your USER where user will be added!" });
 });
 })
