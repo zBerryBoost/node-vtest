@@ -1,7 +1,9 @@
 {
     "version":2,
       "build": {
-      
+      "src": "./src",
+    "output": "./dist",
+    "use": "@vercel/node"
       },
     "routes":[
         {
