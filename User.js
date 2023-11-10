@@ -1,7 +1,7 @@
 const express = require('express');
 const User = require("./UserMongo");
 const router = express.Router();
-
+const app =express();
 router.post("/", async(req, res)=>{
     try{
         const {name , email } =req.body;
@@ -23,6 +23,9 @@ router.get('/', async(req, res)=>{
         console.error("error getting users")
         res.status(500).json({error:"internal server error"})
     }
+    app.get("/", (req, res) => {
+   res.json({ message: "Hello, this is your USER where user will be added!" });
+});
 })
 
 module.exports = router;
