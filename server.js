@@ -12,7 +12,7 @@ console.log("Connected to MongoDB ");
     console.error("error connection to database",err);
 });
 app.use(express.json());
-app.use('https://node-vtest.vercel.app/api/users',userRoute);
+app.use('/https://node-vtest.vercel.app/api/users',userRoute);
 app.get("/", (req, res) => {
    res.json({ message: "Hello, this is your API home!" });
 });
