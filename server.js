@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const userRoute = require("./User");
-const testRoute = require("./test");
+// const testRoute = require("./test");
 // const PORT = 5000;
 const PORT = process.env.PORT;
 const database= process.env.MONGODB_URI;
@@ -14,7 +14,7 @@ console.log("Connected to MongoDB ");
 });
 app.use(express.json());
 app.use('https://node-vtest.vercel.app/api/users',userRoute);
-app.use('https://node-vtest.vercel.app/api/test',testRoute);
+
 app.get("/", (req, res) => {
    res.json({ message: "Hello, this is your API home!" });
 });
