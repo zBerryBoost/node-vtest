@@ -13,9 +13,9 @@ console.log("Connected to MongoDB ");
 });
 app.use(express.json());
 app.use('https://node-vtest.vercel.app/api/users',userRoute);
-// app.get("/", (req, res) => {
-//     console.log("hello data");
-// });
+app.get("/", (req, res) => {
+    console.log("hello data");
+});
 // Routes
 
 
