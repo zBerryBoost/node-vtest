@@ -2,7 +2,7 @@ const express = require('express');
 const User = require("./UserMongo");
 const router = express.Router();
 
-router.post("/https://node-vtest.vercel.app/api/users", async(req, res)=>{
+router.post("/", async(req, res)=>{
     try{
         const {name , email } =req.body;
         const user = new User({name, email});
@@ -15,7 +15,7 @@ router.post("/https://node-vtest.vercel.app/api/users", async(req, res)=>{
     }
 });
 
-router.get('/https://node-vtest.vercel.app/api/user', async(req, res)=>{
+router.get('/', async(req, res)=>{
     try{
         const users = await User.find();
         res.json(users);
